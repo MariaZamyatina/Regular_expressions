@@ -31,13 +31,13 @@ def read_file(file):
     return phonebook_list
 
 
-def write_in_file(file, list):
+def write_to_file(file, list):
     with open(file, "w") as f:
         datawriter = csv.writer(f, delimiter=',')
         datawriter.writerows(list)
 
 if __name__ == '__main__':
     list = read_file("phonebook_raw.csv")
-    write_in_file("phonebook.csv", list)
+    write_to_file("phonebook.csv", list)
 
 
